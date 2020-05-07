@@ -9,7 +9,17 @@ const Contact = React.lazy(() => import('./components/Contact'))
 
 function App () {
   return (
-    <div className='App'>THIS IS A TEST</div>
+    <Router>
+      <div className='App'>THIS IS A TEST
+        <React.Suspense fallback={<p>Trust me... the interwebs is workin' hard to get you your information...</p>}>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/About' component={About} />
+            <Route exact path='/Contact' component={Contact} />
+          </Switch>
+        </React.Suspense>
+      </div>
+    </Router>
   )
 }
 
