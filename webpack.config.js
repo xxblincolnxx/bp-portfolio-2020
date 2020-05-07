@@ -17,7 +17,7 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/index.html'
+      template: 'public/index.html'
     })
   ],
   devServer: {
