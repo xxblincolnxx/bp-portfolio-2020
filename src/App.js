@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import '../dist/Style.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // CONDITIONAL IMPORTS:
@@ -10,7 +10,7 @@ const Contact = React.lazy(() => import('./components/Contact'))
 function App () {
   return (
     <Router>
-      <div className='App'>THIS IS A TEST
+      <div className='App test'>THIS IS A TEST
         <React.Suspense fallback={<p>Trust me... the interwebs is workin' hard to get you your information...</p>}>
           <Switch>
             <Route exact path='/' component={Home} />
