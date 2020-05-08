@@ -1,8 +1,17 @@
-@use'./sass/config';
-@use  './sass/util';
-@use  './sass/animate';
+@import './sass/animate';
+@import './sass/config';
+
+body {
+  font-family: 'Rye', cursive;
+  font-size: 4rem;
+}
 
 .test {
-  background-color: blue;
-
+  @extend %square-to-circle;
+  background-color: $tomato;
+  color: white;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px $navy;
 }

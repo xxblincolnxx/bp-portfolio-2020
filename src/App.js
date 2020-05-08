@@ -10,7 +10,7 @@ const Contact = React.lazy(() => import('./components/Contact'))
 function App () {
   return (
     <Router>
-      <div className='App test'>THIS IS A TEST
+      <div className='App'>
         <React.Suspense fallback={<p>Trust me... the interwebs is workin' hard to get you your information...</p>}>
           <Switch>
             <Route exact path='/' component={Home} />

@@ -1,8 +1,14 @@
+@import 'config';
+@import 'util';
+
+
 %square-to-circle {
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: .5s;
   transition-timing-function: ease;
   &:hover {
-    border-radius: 50%;
+    border-radius: 50px;
+    border: none;
+    background-color: $navy;
   }
 }
