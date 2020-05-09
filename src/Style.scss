@@ -1,17 +1,16 @@
 @import './sass/animate';
 @import './sass/config';
 
-body {
-  font-family: 'Rye', cursive;
-  font-size: 4rem;
-}
 
-.test {
+
+.headline {
   @extend %square-to-circle;
   background-color: $tomato;
+  font-family: 'Rye', cursive;
+  font-size: 4rem;
   color: white;
   width: fit-content;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   text-shadow: 1px 1px 1px $navy;
 }
