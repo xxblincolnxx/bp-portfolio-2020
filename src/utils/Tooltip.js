@@ -6,9 +6,9 @@ export default function Tooltip ({ text, children }) {
   return (
     <Hover>
       {(hovering) => (
-        <div className='container'>
+        <div className='tooltip-contain'>
           {hovering === true &&
-            <div className='tooltip'>{text}</div>}
+            <div className='tooltip animate__animated animate__fadeInLeft'>{text}</div>}
           {children}
         </div>
       )}

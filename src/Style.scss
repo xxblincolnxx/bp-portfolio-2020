@@ -4,13 +4,39 @@
 
 
 .headline {
-  @extend %square-to-circle;
   background-color: $tomato;
-  font-family: 'Rye', cursive;
+  font-family: $font-headline;
   font-size: 4rem;
   color: white;
   width: fit-content;
   padding: 5px;
   text-align: center;
-  text-shadow: 1px 1px 1px $navy;
+  // text-shadow: 1px 1px 1px $navy;
+}
+
+.tooltip {
+  // font-family: $font-sans;
+  position: absolute;
+  width: 160px;
+  bottom: 30%;
+  left: 170%;
+  margin-left: -80px;
+  border-radius: 3px;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  padding: 7px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px
+}
+
+.tooltip-contain {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  padding: 20px;
+}
+
+.nav-list {
+  list-style: none;
 }

@@ -1,5 +1,6 @@
 $tomato: rgb(255, 117, 93);
 $navy: rgb(59, 63, 106);
+$gray-txt: rgb(189, 189, 189);
 $font-headline: 'Rye', cursive;
 $font-serif:'Nixie One', cursive;
 $font-sans:'Dosis', sans-serif;
@@ -9,8 +10,10 @@ $font-sans:'Dosis', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $font-serif;
 }
 
 img {
   max-width: 100%;
 }
+

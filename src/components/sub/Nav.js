@@ -1,21 +1,58 @@
-import { IconName } from 'react-icons/ti'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { TiStarburst } from 'react-icons/ti'
+import { MdSchool } from 'react-icons/md'
+import { FaLightbulb } from 'react-icons/fa'
 
-import { IconName } from "react-icons/gi";
+function Label ({ text }) {
+  return (
+    <div className='filter-label'>{text}</div>
+  )
+}
 
-// TiBusinessCard for personal info
-// TiAttachment for resume DL
-// TiImage for pictures
-// TiMail for email
-// TiPencil for send feedback
-// TiSocialGithubCircular github link
-// TiSocialLinkedinCircular linkedin link
-// TiThList view as list
-// TiThLarge view as grid
-// TiCog settings
-// TiLightbulb ideas
-// TiMortarBoard classwork
-// TiSpanner working-on
-// GiBrain for my brain children
-// GiOrange because it looks cool
-// GiAbstract076 because it also looks cool
-// GiCorkedTube experiments
+Label.propTypes = {
+  text: PropTypes.string.isRequired
+}
+
+export default class Nav extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      filter: null
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick (filter) {
+    if (this.state.filter === filter) {
+      this.setState({
+        filter: null
+      })
+    } else {
+      this.setState({
+        filter: filter
+      })
+    }
+  }
+
+  render () {
+    return (
+      <ul className='nav-list'>
+        <li className='filter-item'>
+          <TiStarburst onClick={() => this.handleClick('Latest')} color='rgb(59, 63, 106)' size={22} />
+          {this.state.filter === 'Latest' ? <Label text='Working On' /> : null}
+        </li>
+        <li className='filter-item'>
+          <MdSchool onClick={() => this.handleClick('School')} color='rgb(59, 63, 106)' size={22} />
+          {this.state.filter === 'School' ? <Label text='Classwork' /> : null}
+        </li>
+        <li className='filter-item'>
+          <FaLightbulb onClick={() => this.handleClick('Future')} color='rgb(59, 63, 106)' size={22} />
+          {this.state.filter === 'Future' ? <Label text='Ideas for Future' /> : null}
+        </li>
+      </ul>
+    )
+  }
+}
