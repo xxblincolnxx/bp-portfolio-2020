@@ -30,10 +30,12 @@ export default class Nav extends React.Component {
       this.setState({
         filter: null
       })
+      this.props.toggleDisplay('All')
     } else {
       this.setState({
         filter: filter
       })
+      this.props.toggleDisplay(filter)
     }
   }
 
@@ -41,18 +43,22 @@ export default class Nav extends React.Component {
     return (
       <ul className='nav-list'>
         <li className='filter-item'>
-          <TiStarburst onClick={() => this.handleClick('Latest')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'Latest' ? <Label text='Working On' /> : null}
+          <TiStarburst onClick={() => this.handleClick('Independent')} color='rgb(59, 63, 106)' size={22} />
+          {this.state.filter === 'Independent' ? <Label text='Independent Study' /> : null}
         </li>
         <li className='filter-item'>
-          <MdSchool onClick={() => this.handleClick('School')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'School' ? <Label text='Classwork' /> : null}
+          <MdSchool onClick={() => this.handleClick('Classwork')} color='rgb(59, 63, 106)' size={22} />
+          {this.state.filter === 'Classwork' ? <Label text='Classwork' /> : null}
         </li>
         <li className='filter-item'>
           <FaLightbulb onClick={() => this.handleClick('Future')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'Future' ? <Label text='Ideas for Future' /> : null}
+          {this.state.filter === 'Future' ? <Label text='Future Project' /> : null}
         </li>
       </ul>
     )
   }
+}
+
+Nav.propTypes = {
+  toggleDisplay: PropTypes.func.isRequired
 }

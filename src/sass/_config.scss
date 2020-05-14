@@ -13,6 +13,11 @@ $font-sans:'Dosis', sans-serif;
   font-family: $font-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 img {
   max-width: 100%;
 }

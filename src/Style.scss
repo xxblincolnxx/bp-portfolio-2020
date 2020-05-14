@@ -1,4 +1,4 @@
-@import './sass/animate';
+
 @import './sass/config';
 
 
@@ -39,4 +39,13 @@
 
 .nav-list {
   list-style: none;
+}
+
+.card {
+  display: flex;
+  width: 300px;
+  height: 400px;
+  border-radius: 3px;
+  box-shadow: -1px 1px 3px black;
+  color: white;
 }

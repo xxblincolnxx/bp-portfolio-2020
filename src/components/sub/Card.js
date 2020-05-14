@@ -1,18 +1,18 @@
 import React from 'react'
 
-export default function Card ({ title, image, symbol, href }) {
+export default function Card ({ project }) {
   const style = {
-    backgroundImage: URL(image),
+    backgroundImage: `url(${project.image})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
   }
-
+  const { title, href, category } = project
   return (
     <>
       <a href={href}>
         <div className='card' style={style}>
-          {symbol}
+          Symbol
         </div>
         <h1>{title}</h1>
       </a>
