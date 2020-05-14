@@ -1,5 +1,4 @@
 import React from 'react'
-import Headline from './sub/Headline'
 import Links from './sub/Mylinks'
 import Nav from './sub/Nav'
 import Grid from './sub/Grid'
@@ -11,10 +10,11 @@ const projects = [
     title: 'Bev Dev',
     blurb: 'My final group project at Momentum Learning.',
     image: '../img/bev_dev_cropped.jpg',
-    href: 'https://github.com/xxblincolnxx/Beverage-Director',
+    href: 'https://bevdir.herokuapp.com/',
     category: 'Classwork',
     tools: '',
     challenges: '',
+    filters: ['Classwork', 'Vue.js', 'JS', 'Django', 'All'],
     status: 'Complete'
   },
   {
@@ -22,121 +22,126 @@ const projects = [
     title: 'Flashcards',
     blurb: null,
     image: '../img/flashcard_cropped.jpg',
-    href: 'https://github.com/momentum-cohort-2020-01/django-multiple-choice-xxblincolnxx',
+    href: 'https://flashcard-benji.herokuapp.com/',
     category: 'Classwork',
     tools: '',
     challenges: '',
+    filters: ['Classwork', 'JS', 'Django', 'Python', 'All'],
     status: 'Complete'
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
+  },
+  {
+    id: uuidv4(),
+    title: '',
+    blurb: null,
+    image: '',
+    href: '',
+    category: '',
+    tools: '',
+    challenges: '',
+    filters: [],
+    status: ''
   }
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // },
-  // {
-  //   id: uuidv4(),
-  //   title: '',
-  //   blurb: null,
-  //   image: '',
-  //   href: '',
-  //   category: '',
-  //   tools: '',
-  //   challenges: '',
-  //   status: ''
-  // }
 ]
+function Headline () {
+  return (
+    <div className='headline'>BP</div>
+  )
+}
 
 export default class Home extends React.Component {
   constructor (props) {
@@ -159,10 +164,13 @@ export default class Home extends React.Component {
   render () {
     return (
       <>
-        <Headline />
-        <Nav toggleDisplay={(selection) => this.handleDisplayChange(selection)} />
-        <Links />
+        <div className='container'>
+          <Headline />
+          <Nav toggleDisplay={(selection) => this.handleDisplayChange(selection)} />
+        </div>
+
         <Grid projects={this.state.projects} display={this.state.display} />
+        <Links />
       </>
     )
   }

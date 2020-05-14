@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TiStarburst } from 'react-icons/ti'
-import { MdSchool } from 'react-icons/md'
-import { FaLightbulb } from 'react-icons/fa'
+import { FaBrain, FaGraduationCap, FaVuejs, FaReact, FaPython, FaSass } from 'react-icons/fa'
+import { DiDjango, DiJavascript1 } from 'react-icons/di'
+import { BsCode } from 'react-icons/bs'
+import { AiOutlineEllipsis } from 'react-icons/Ai'
 
 function Label ({ text }) {
   return (
@@ -19,7 +20,7 @@ export default class Nav extends React.Component {
     super(props)
 
     this.state = {
-      filter: null
+      filter: 'All'
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -28,7 +29,7 @@ export default class Nav extends React.Component {
   handleClick (filter) {
     if (this.state.filter === filter) {
       this.setState({
-        filter: null
+        filter: 'All'
       })
       this.props.toggleDisplay('All')
     } else {
@@ -41,20 +42,41 @@ export default class Nav extends React.Component {
 
   render () {
     return (
-      <ul className='nav-list'>
-        <li className='filter-item'>
-          <TiStarburst onClick={() => this.handleClick('Independent')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'Independent' ? <Label text='Independent Study' /> : null}
-        </li>
-        <li className='filter-item'>
-          <MdSchool onClick={() => this.handleClick('Classwork')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'Classwork' ? <Label text='Classwork' /> : null}
-        </li>
-        <li className='filter-item'>
-          <FaLightbulb onClick={() => this.handleClick('Future')} color='rgb(59, 63, 106)' size={22} />
-          {this.state.filter === 'Future' ? <Label text='Future Project' /> : null}
-        </li>
-      </ul>
+      <>
+        <ul className='nav-list'>
+          <li key='All'>
+            <BsCode className='filter-item' onClick={() => this.handleClick('All')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Independent'>
+            <FaBrain className='filter-item' onClick={() => this.handleClick('Independent')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Classwork'>
+            <FaGraduationCap className='filter-item' onClick={() => this.handleClick('Classwork')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Django'>
+            <DiDjango className='filter-item' onClick={() => this.handleClick('Django')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='JavaScript'>
+            <DiJavascript1 className='filter-item' onClick={() => this.handleClick('JavaScript')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Vue'>
+            <FaVuejs className='filter-item' onClick={() => this.handleClick('Vue.js')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='React'>
+            <FaReact className='filter-item' onClick={() => this.handleClick('React')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Python'>
+            <FaPython className='filter-item' onClick={() => this.handleClick('Python')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Sass'>
+            <FaSass className='filter-item' onClick={() => this.handleClick('Sass')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+          <li key='Incoming'>
+            <AiOutlineEllipsis className='filter-item' onClick={() => this.handleClick('Incoming')} color='rgb(255, 117, 93)' size={25} />
+          </li>
+        </ul>
+        <Label text={`${this.state.filter} Projects`} />
+      </>
     )
   }
 }

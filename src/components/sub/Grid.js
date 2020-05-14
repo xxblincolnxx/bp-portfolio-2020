@@ -1,14 +1,15 @@
 import React from 'react'
 import Card from './Card'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Grid ({ projects, display }) {
-  const filteredProjects = display === 'All' ? projects : projects.filter(project => project.category === display)
+  const filteredProjects = display === 'All' ? projects : projects.filter(project => project.filters.includes(display))
 
   return (
-    <div>
+    <div className='container'>
       {filteredProjects.map((project) => {
         return (
-          <Card key={project.id} project={project} />
+          <Card key={uuidv4()} project={project} display={display} />
         )
       })}
     </div>

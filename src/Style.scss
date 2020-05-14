@@ -1,5 +1,6 @@
 
 @import './sass/config';
+@import './sass/util';
 
 
 
@@ -43,9 +44,26 @@
 
 .card {
   display: flex;
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   border-radius: 3px;
   box-shadow: -1px 1px 3px black;
   color: white;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;;
+}
+.filter-item {
+  background-color: $navy;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }
