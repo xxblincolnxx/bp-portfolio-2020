@@ -1,5 +1,5 @@
 import React from 'react'
-import '../dist/style.css'
+import './style.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // CONDITIONAL IMPORTS:
