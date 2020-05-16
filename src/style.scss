@@ -1,0 +1,160 @@
+
+@import './sass/config';
+@import './sass/util';
+
+
+
+.headline {
+  background-color: $tomato;
+  font-family: $font-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 4px 4px;
+  // text-shadow: 1px 1px 1px $navy;
+}
+
+.tooltip {
+  // font-family: $font-sans;
+  position: absolute;
+  width: 160px;
+  bottom: 30%;
+  left: 170%;
+  margin-left: -80px;
+  border-radius: 3px;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  padding: 7px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px
+}
+
+.tooltip-contain {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  padding: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 300px;
+  border-radius: 3px;
+  box-shadow: -1px 1px 3px black;
+  margin: 5px;
+  color: white;
+
+  h2 {
+    color: rgba(189, 189, 189, 0.9);
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;;
+}
+
+.vertical {
+  width: 5%;
+  margin-right: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  text-align: center;
+  justify-content:  center;
+
+  li {
+    width: 100%;
+    justify-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  align-content: flex-start;
+}
+.filter-item {
+  background-color: $navy;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin: 4px 4px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter-label {
+  width: 100%;
+  padding: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(58, 58, 58, 0.783);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(58, 58, 58, 0.783);
+}
+
+@media only screen and (max-width: 800px){
+  .vertical {
+    width: 100%;
+    flex-wrap: nowrap;
+    margin: 10px;
+    li {
+      margin: 10px;
+    }
+  }
+  .container {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+    padding: 10px;
+
+  }
+  .card-contain {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .card-title {
+    margin-bottom: 10px;
+  }
+  .nav-list {
+    width: 100%;
+  }
+}
