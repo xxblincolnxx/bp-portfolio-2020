@@ -20,7 +20,7 @@ module.exports = {
       template: 'src/index.html'
     })
   ],
-  watch: true,
+  watch: false,
   devServer: {
     historyApiFallback: true
   }
