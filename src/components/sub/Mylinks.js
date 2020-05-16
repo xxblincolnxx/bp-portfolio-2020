@@ -17,7 +17,7 @@ export default function Links () {
           </a>
         </li>
         <li>
-          <a href='/../img/ben_prothe_resume.pdf' title='Download Resume (pdf)' download>
+          <a href='../img/ben_prothe_resume.pdf/' title='Download Resume (pdf)' download>
             <BsDownload color='rgb(189, 189, 189)' size={30} />
           </a>
         </li>
