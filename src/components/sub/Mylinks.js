@@ -1,27 +1,28 @@
 import React from 'react'
 import Tooltip from '../../utils/Tooltip'
-import { TiSocialGithubCircular, TiSocialLinkedinCircular, TiAttachment } from 'react-icons/ti'
+import { BsDownload } from 'react-icons/bs'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Links () {
   return (
-    <div>
-      <ul className='nav-list'>
+    <>
+      <ul className='nav-list vertical'>
         <li>
-          <Tooltip text='See my github'>
-            <TiSocialGithubCircular color='rgb(189, 189, 189)' size={50} />
-          </Tooltip>
+          <a href='https://github.com/xxblincolnxx' title='Github'>
+            <FaGithub color='rgb(189, 189, 189)' size={40} />
+          </a>
         </li>
         <li>
-          <Tooltip text='See my Linkedin'>
-            <TiSocialLinkedinCircular color='rgb(189, 189, 189)' size={50} />
-          </Tooltip>
+          <a href='https://www.linkedin.com/in/benprothe/' title='Linkedin'>
+            <FaLinkedin color='rgb(189, 189, 189)' size={40} />
+          </a>
         </li>
         <li>
-          <Tooltip text='Download Resume (pdf)'>
-            <TiAttachment color='rgb(189, 189, 189)' size={50} />
-          </Tooltip>
+          <a href='../img/ben_prothe_resume.pdf' title='Download Resume (pdf)' download>
+            <BsDownload color='rgb(189, 189, 189)' size={30} />
+          </a>
         </li>
       </ul>
-    </div>
+    </>
   )
 }

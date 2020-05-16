@@ -5,14 +5,10 @@ import { DiDjango, DiJavascript1 } from 'react-icons/di'
 import { BsCode } from 'react-icons/bs'
 import { AiOutlineEllipsis } from 'react-icons/Ai'
 
-function Label ({ text }) {
+function Headline () {
   return (
-    <div className='filter-label'>{text}</div>
+    <div className='headline'>BP</div>
   )
-}
-
-Label.propTypes = {
-  text: PropTypes.string.isRequired
 }
 
 export default class Nav extends React.Component {
@@ -44,38 +40,39 @@ export default class Nav extends React.Component {
     return (
       <>
         <ul className='nav-list'>
-          <li key='All'>
+          <Headline />
+          <li key='All' title='Filter All'>
             <BsCode className='filter-item' onClick={() => this.handleClick('All')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Independent'>
+          <li key='Independent' title='Filter Independent Studies'>
             <FaBrain className='filter-item' onClick={() => this.handleClick('Independent')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Classwork'>
-            <FaGraduationCap className='filter-item' onClick={() => this.handleClick('Classwork')} color='rgb(255, 117, 93)' size={25} />
+          <li key='Classroom' title='Filter Classroom Projects'>
+            <FaGraduationCap className='filter-item' onClick={() => this.handleClick('Classroom')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Django'>
+          <li key='Django' title='Filter Django Projects'>
             <DiDjango className='filter-item' onClick={() => this.handleClick('Django')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='JavaScript'>
+          <li key='JavaScript' title='Filter JavaScript Projects'>
             <DiJavascript1 className='filter-item' onClick={() => this.handleClick('JavaScript')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Vue'>
+          <li key='Vue' title='Filter Vue Projects'>
             <FaVuejs className='filter-item' onClick={() => this.handleClick('Vue.js')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='React'>
+          <li key='React' title='Filter React Projects'>
             <FaReact className='filter-item' onClick={() => this.handleClick('React')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Python'>
+          <li key='Python' title='Filter Python Projects'>
             <FaPython className='filter-item' onClick={() => this.handleClick('Python')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Sass'>
+          <li key='Sass' title='Filter Sass Projects'>
             <FaSass className='filter-item' onClick={() => this.handleClick('Sass')} color='rgb(255, 117, 93)' size={25} />
           </li>
-          <li key='Incoming'>
-            <AiOutlineEllipsis className='filter-item' onClick={() => this.handleClick('Incoming')} color='rgb(255, 117, 93)' size={25} />
+          <li key='Incoming' title='Filter Future Projects'>
+            <AiOutlineEllipsis className='filter-item' onClick={() => this.handleClick('Coming Soon')} color='rgb(255, 117, 93)' size={25} />
           </li>
         </ul>
-        <Label text={`${this.state.filter} Projects`} />
+
       </>
     )
   }

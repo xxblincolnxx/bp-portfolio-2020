@@ -3,6 +3,7 @@ import Links from './sub/Mylinks'
 import Nav from './sub/Nav'
 import Grid from './sub/Grid'
 import { v4 as uuidv4 } from 'uuid'
+import PropTypes from 'prop-types'
 
 const projects = [
   {
@@ -11,10 +12,10 @@ const projects = [
     blurb: 'My final group project at Momentum Learning.',
     image: '../img/bev_dev_cropped.jpg',
     href: 'https://bevdir.herokuapp.com/',
-    category: 'Classwork',
+    category: 'Classroom',
     tools: '',
     challenges: '',
-    filters: ['Classwork', 'Vue.js', 'JS', 'Django', 'All'],
+    filters: ['Classroom', 'Vue.js', 'JavaScript', 'Django', 'Python', 'All'],
     status: 'Complete'
   },
   {
@@ -23,124 +24,82 @@ const projects = [
     blurb: null,
     image: '../img/flashcard_cropped.jpg',
     href: 'https://flashcard-benji.herokuapp.com/',
-    category: 'Classwork',
+    category: 'Classroom',
     tools: '',
     challenges: '',
-    filters: ['Classwork', 'JS', 'Django', 'Python', 'All'],
+    filters: ['Classroom', 'JavaScript', 'Django', 'Python', 'All'],
     status: 'Complete'
   },
   {
     id: uuidv4(),
-    title: '',
+    title: 'OO-PIG',
     blurb: null,
-    image: '',
-    href: '',
-    category: '',
+    image: '../img/oop_pig_cropped.jpg',
+    href: 'https://github.com/xxblincolnxx/oo-pig-xxblincolnxx',
+    category: 'Classroom',
     tools: '',
     challenges: '',
-    filters: [],
-    status: ''
+    filters: ['Classroom', 'Python'],
+    status: 'Complete'
   },
   {
     id: uuidv4(),
-    title: '',
+    title: 'Baby Notes',
     blurb: null,
-    image: '',
-    href: '',
+    image: '../img/bb_notes_cropped.jpg',
+    href: 'https://github.com/xxblincolnxx/build-a-notes-application-xxblincolnxx',
     category: '',
     tools: '',
     challenges: '',
-    filters: [],
-    status: ''
+    filters: ['Classroom', 'JavaScript'],
+    status: 'Complete'
   },
   {
     id: uuidv4(),
-    title: '',
+    title: 'Portfolio',
     blurb: null,
-    image: '',
-    href: '',
+    image: '../img/port_cropped.jpg',
+    href: 'https://github.com/xxblincolnxx/bp-portfolio-2020',
     category: '',
     tools: '',
     challenges: '',
-    filters: [],
-    status: ''
-  },
-  {
-    title: '',
-    blurb: null,
-    image: '',
-    href: '',
-    category: '',
-    tools: '',
-    challenges: '',
-    filters: [],
-    status: ''
+    filters: ['Independent', 'React', 'JavaScript', 'Sass'],
+    status: 'In Progress'
   },
   {
     id: uuidv4(),
-    title: '',
+    title: 'Tank Builder',
     blurb: null,
-    image: '',
+    image: '../img/tank_builder_cropped.jpg',
     href: '',
     category: '',
     tools: '',
     challenges: '',
-    filters: [],
-    status: ''
+    filters: ['Independent', 'React', 'Django', 'Python', 'JavaScript', 'Coming Soon'],
+    status: 'Not Started'
   },
   {
     id: uuidv4(),
-    title: '',
+    title: 'Just the Recipe',
     blurb: null,
-    image: '',
+    image: '../img/jtfr_bg_cropped.jpg',
     href: '',
     category: '',
     tools: '',
     challenges: '',
-    filters: [],
-    status: ''
-  },
-  {
-    id: uuidv4(),
-    title: '',
-    blurb: null,
-    image: '',
-    href: '',
-    category: '',
-    tools: '',
-    challenges: '',
-    filters: [],
-    status: ''
-  },
-  {
-    id: uuidv4(),
-    title: '',
-    blurb: null,
-    image: '',
-    href: '',
-    category: '',
-    tools: '',
-    challenges: '',
-    filters: [],
-    status: ''
-  },
-  {
-    id: uuidv4(),
-    title: '',
-    blurb: null,
-    image: '',
-    href: '',
-    category: '',
-    tools: '',
-    challenges: '',
-    filters: [],
-    status: ''
+    filters: ['Independent', 'React', 'Coming Soon'],
+    status: 'Not Started'
   }
 ]
-function Headline () {
+
+function Label ({ text }) {
   return (
-    <div className='headline'>BP</div>
+    <div className='filter-label'>{text}</div>
   )
+}
+
+Label.propTypes = {
+  text: PropTypes.string.isRequired
 }
 
 export default class Home extends React.Component {
@@ -163,15 +122,18 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <>
-        <div className='container'>
-          <Headline />
-          <Nav toggleDisplay={(selection) => this.handleDisplayChange(selection)} />
+      <div className='container'>
+        <Links />
+        <div className='main'>
+          <div className='container align-items-center'>
+            <Nav toggleDisplay={(selection) => this.handleDisplayChange(selection)} />
+            <Label text={`${this.state.display} Projects`} />
+          </div>
+
+          <Grid projects={this.state.projects} display={this.state.display} />
         </div>
 
-        <Grid projects={this.state.projects} display={this.state.display} />
-        <Links />
-      </>
+      </div>
     )
   }
 }

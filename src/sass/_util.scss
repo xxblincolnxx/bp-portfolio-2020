@@ -5,8 +5,21 @@
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .m-5 {
   margin: 5px;
+}
+
+.wd-100 {
+  width: 100%;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
 }
