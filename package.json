@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "NODE_ENV='production' webpack"
+    "make": "NODE_ENV='production' webpack"
   },
   "babel": {
     "presets": [
