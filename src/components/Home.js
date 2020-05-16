@@ -1,7 +1,7 @@
 import React from 'react'
-import Links from './sub/Mylinks'
-import Nav from './sub/Nav'
-import Grid from './sub/Grid'
+import Links from './sub/mylinks'
+import Nav from './sub/nav'
+import Grid from './sub/grid'
 import { v4 as uuidv4 } from 'uuid'
 import PropTypes from 'prop-types'
 

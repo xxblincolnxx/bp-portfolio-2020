@@ -1,5 +1,4 @@
 import React from 'react'
-import Tooltip from '../../utils/Tooltip'
 import { BsDownload } from 'react-icons/bs'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 

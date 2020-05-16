@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card'
+import Card from './card'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function Grid ({ projects, display }) {

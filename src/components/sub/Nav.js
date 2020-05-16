@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FaBrain, FaGraduationCap, FaVuejs, FaReact, FaPython, FaSass } from 'react-icons/fa'
 import { DiDjango, DiJavascript1 } from 'react-icons/di'
 import { BsCode } from 'react-icons/bs'
-import { AiOutlineEllipsis } from 'react-icons/Ai'
+import { AiOutlineEllipsis } from 'react-icons/ai'
 
 function Headline () {
   return (

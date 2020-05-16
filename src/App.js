@@ -3,9 +3,9 @@ import '../dist/Style.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // CONDITIONAL IMPORTS:
-const Home = React.lazy(() => import('./components/Home'))
-const About = React.lazy(() => import('./components/About'))
-const Contact = React.lazy(() => import('./components/Contact'))
+const Home = React.lazy(() => import('./components/home'))
+const About = React.lazy(() => import('./components/about'))
+const Contact = React.lazy(() => import('./components/contact'))
 
 function App () {
   return (

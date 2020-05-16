@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaBrain, FaGraduationCap, FaVuejs, FaReact, FaPython, FaSass } from 'react-icons/fa'
 import { DiDjango, DiJavascript1 } from 'react-icons/di'
-import { AiOutlineEllipsis } from 'react-icons/Ai'
+import { AiOutlineEllipsis } from 'react-icons/ai'
 
 export default class Card extends React.Component {
   constructor (props) {
@@ -37,7 +37,7 @@ export default class Card extends React.Component {
       alignItems: 'center'
     }
     const { title, href, status, filters } = this.props.project
-    const { display, animationIndex } = this.props
+    const { display } = this.props
     const { hoverClass } = this.state
 
     if (filters.includes('Coming Soon')) {
