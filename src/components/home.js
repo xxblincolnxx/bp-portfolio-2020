@@ -14,7 +14,7 @@ const projects = [
     href: 'https://bevdir.herokuapp.com/',
     category: 'Classroom',
     tools: '',
-    challenges: '',
+    challenges: 'Collaborate, remotely (not the original plan), with a team of folks to build a Django project. We wanted it to have a RESTful API and we wanted to challenge ourselves to learn a frontend framework.',
     filters: ['Classroom', 'Vue.js', 'JavaScript', 'Django', 'Python', 'All'],
     status: 'Complete'
   },
@@ -26,7 +26,7 @@ const projects = [
     href: 'https://flashcard-benji.herokuapp.com/',
     category: 'Classroom',
     tools: '',
-    challenges: '',
+    challenges: 'This was a solo project at Momentum with the goal of "independently learn something new". My challenges were to implement the Django REST Framework and host images on AWS S3.',
     filters: ['Classroom', 'JavaScript', 'Django', 'Python', 'All'],
     status: 'Complete'
   },
@@ -38,7 +38,7 @@ const projects = [
     href: 'https://github.com/xxblincolnxx/oo-pig-xxblincolnxx',
     category: 'Classroom',
     tools: '',
-    challenges: '',
+    challenges: 'A Momentum assignment where the goal was to use an OOP approach to creat logic for the dice game "Pig"',
     filters: ['Classroom', 'Python'],
     status: 'Complete'
   },
@@ -50,7 +50,7 @@ const projects = [
     href: 'https://github.com/xxblincolnxx/build-a-notes-application-xxblincolnxx',
     category: '',
     tools: '',
-    challenges: '',
+    challenges: 'Use AJAX with a node API and build a basic CRUD application.',
     filters: ['Classroom', 'JavaScript'],
     status: 'Complete'
   },
@@ -62,7 +62,7 @@ const projects = [
     href: 'https://github.com/xxblincolnxx/bp-portfolio-2020',
     category: '',
     tools: '',
-    challenges: '',
+    challenges: 'Make it a lightweight React SPA with a minimalistic, clean aesthetic.',
     filters: ['Independent', 'React', 'JavaScript', 'Sass'],
     status: 'In Progress'
   },
